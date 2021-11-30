@@ -28,7 +28,7 @@ const getQuestionByHashTag = async (req: Request, res: Response, next: NextFunct
     const pageInfo = { hashtag, limit, offset };
     const hashtagService: HashtagService = new HashtagService();
     try {
-        const {questionList, questionCount} = await hashtagService.getQuestionByHashTag(pageInfo);
+        const { questionList, questionCount } = await hashtagService.getQuestionByHashTag(pageInfo);
         return res.status(200).json({
             questionList: questionList,
             questionCount: questionCount,
