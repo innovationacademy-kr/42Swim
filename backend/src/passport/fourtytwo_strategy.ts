@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 import passport from "passport";
+import bcrypt from "bcrypt";
 import Strategy from "passport-42";
 const FortyTwoStrategy = Strategy;
 
@@ -18,11 +19,12 @@ export const fourtyTwoStrategy = () => {
       },
       async function (accessToken, refreshToken, profile, done) {
         try {
+          const encryptedPassword = await bcrypt.hashSync(process.env.PASSWORD, +process.env.SALT_ROUNDS);
           const userService: UserService = new UserService();
           const { exUser, newUser } = await userService.createUser({
             nickname: profile.username,
             email: profile.emails[0].value,
-            password: process.env.PASSWORD,
+            password: encryptedPassword,
             photo: profile.photos[0].value,
           });
           if (exUser) {
