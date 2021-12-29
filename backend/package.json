@@ -54,7 +54,7 @@
   },
   "scripts": {
     "start": "ts-node src/server.ts",
-    "test" : "jest --setupFiles dotenv/config --forceExit --detectOpenHandles",
+    "test" : "jest --setupFiles --forceExit --detectOpenHandles",
     "typeorm": "ts-node ./node_modules/typeorm/cli.js",
     "build": "nodemon --watch '*.ts' --exec 'ts-node' src/server.ts",
     "lint": "eslint src/**/*.ts",
