@@ -1,8 +1,8 @@
-import { UserService } from "../service/user_service"
-import { redisClient } from "../lib/redis";
-import connection from '../connection';
+import { UserService } from "../../service/user_service"
+import { redisClient } from "../../lib/redis";
+import connection from '../../connection';
 
-import { UserNotFoundException, UserForbiddenException } from "../exception/user_exception";
+import { UserNotFoundException, UserForbiddenException } from "../../exception/user_exception";
 
 
 describe('UserService test', () => {
@@ -14,14 +14,13 @@ describe('UserService test', () => {
     }
     beforeAll(async () => {
         await connection.create();
-        redisClient
     })
     afterAll(async () => {
         await connection.close();
         await redisClient.quit();
     })
     beforeEach(async () => {
-        await connection.clear();
+        await connection.clear([{ name: "User", tableName: "user" }]);
     })
 
     test('createUser 유저 생성 성공 테스트', async () => {
