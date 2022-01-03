@@ -196,8 +196,6 @@ export class UserService {
 				'chosen_answer_covers.chosenAnswerCount', 'comment_covers.commentCount'])
 			.getRawMany();
 
-		console.log(userStatistics);
-
 		return userStatistics;
 	}
 
