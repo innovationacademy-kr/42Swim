@@ -48,9 +48,6 @@ const MarkdownEditor = ({
         axios.post(url, form, { withCredentials: true }).then((res) => {
           if (res.status === 200) resolve(res?.data?.image);
         });
-        // setTimeout(() => {
-        //   resolve("done...");
-        // }, 3000);
       });
       console.log(res);
       yield res;

@@ -9,8 +9,11 @@ const fetcher = async (url: string) => {
   })
     .then((response) => response.data)
     .catch((err) => {
-      console.error(err);
-      throw err;
+      if (!err.status) console.log("Unknown Network Error in axios");
+      else {
+        console.error(err);
+        throw err;
+      }
     });
   return res;
 };

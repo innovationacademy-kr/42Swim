@@ -5,6 +5,8 @@ export const MarkDownEditorWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  white-space: pre-line;
+  word-break: break-all;
   /* margin-top: 3rem; */
   button {
     padding: 4px;
@@ -49,7 +51,6 @@ export const MarkDownEditorWrap = styled.div`
     box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 0px;
     font-size: 16px;
     outline: none;
-    font-family: Roboto;
     line-height: 1.5;
     &::placeholder {
       color: rgba(0, 0, 0, 0.3);
