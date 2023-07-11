@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "testbuild": "vite build --mode production",
+    "build": "vite build --mode production",
+    "typecheck": "tsc && vite build",
     "serve": "vite preview --port 3000",
     "eslint": "eslint --fix",
     "storybook": "start-storybook -p 6006",
