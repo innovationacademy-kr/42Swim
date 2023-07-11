@@ -133,3 +133,6 @@ config
 *awsconfig.json
 
 *monthRankerinfo*
+
+./db/**/*
+./db/*
