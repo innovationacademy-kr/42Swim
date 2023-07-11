@@ -1,0 +1,59 @@
+version: "3"
+
+services:
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - 6379:6379
+  db:
+    image: mariadb:10
+    container_name: db
+    ports:
+      - 3306:3306
+    volumes:
+      - ./backend/db/conf.d:/etc/mysql/conf.d
+      - ./backend/db/data:/var/lib/mysql
+      - ./backend/db/initdb.d:/docker-entrypoint-initdb.d
+    env_file: ./backend/.env
+    environment:
+      TZ: Asia/Seoul
+    networks:
+      - 42swim_net
+    restart: always
+  42swim-server:
+    image: 42swim-server:v1
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: 42swim-server
+    ports:
+      - 5000:5000
+    env_file: ./backend/.env
+    environment:
+      TZ: Asia/Seoul
+    networks:
+      - 42swim_net
+    depends_on:
+      - db
+      - redis
+    restart: always
+  42swim-client:
+    image: 42swim-client:v1
+    build:
+      context: ./frontend
+      dockerfile: prod.Dockerfile
+    container_name: 42swim-client
+    env_file: ./frontend/.env
+    ports:
+      - 80:80
+    networks:
+      - 42swim_net
+    depends_on:
+      - 42swim-server
+    restart: always
+
+networks:
+  42swim_net:
+    name: 42swim_net
+    driver: bridge

@@ -24,7 +24,7 @@ const MainPage = ({ history, ...props }: Props) => {
 
   const onSearch = (e: any) => {
     console.log("search");
-    Sentry.captureEvent(e);
+    // Sentry.captureEvent(e);
     history.push(`/search?keyword=${searchVal}`);
     // search 페이지로 라우팅해주기
   };

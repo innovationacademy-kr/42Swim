@@ -1,4 +1,5 @@
 # Logs
+nohup.out
 logs
 *.log
 npm-debug.log*
@@ -132,3 +133,6 @@ config
 *awsconfig.json
 
 *monthRankerinfo*
+
+./db/**/*
+./db/*

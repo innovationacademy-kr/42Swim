@@ -18,12 +18,12 @@ export const fourtyTwoStrategy = () => {
       },
       async function (accessToken, refreshToken, profile, done) {
         try {
-          const userService: UserService = new UserService();
+	  const userService: UserService = new UserService();
           const { exUser, newUser } = await userService.createUser({
             nickname: profile.username,
             email: profile.emails[0].value,
             password: process.env.PASSWORD,
-            photo: profile.photos[0].value,
+            photo: profile._json.image.link,
           });
           if (exUser) {
             return done(null, exUser);

@@ -35,10 +35,10 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 const corsOptions = {
     origin: [
         "http://localhost:3000",
-        "http://3.36.121.236",
-        "http://swim.42seoul.io",
-        "https://swim.42seoul.io",
-        "https://3.36.121.236",
+        "http://52.79.233.246",
+        "http://42swim.shop",
+        "https://42swim.shop",
+        "https://52.79.233.246",
     ],
     credentials: true,
 };
@@ -53,6 +53,6 @@ app.listen(5000, async () => {
     console.log("서버 가동");
     await createConnection();
     console.log("DB 연결");
-    monthRankReset;
+    //monthRankReset;
     // await insertSeed();
 });

@@ -68,3 +68,42 @@
 - feature/기능요약 에서 기능요약 부분을 작성할때 띄어쓰기는 - 를 이용하여 작성
   - ex) loginApi (X) login-api (O)
 
+</br>
+
+## ✨ Contributors
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/hainho">
+          <img src="https://avatars.githubusercontent.com/u/67993856?v=4" width="100px;" alt=""/>
+          <br /><sub><b>hainho</b></sub>
+        </a>
+        <br />
+        <sub><b>Backend</b></sub>
+       </td>
+      <td align="center">
+        <a href="https://github.com/earthkingman">
+          <img src="https://avatars.githubusercontent.com/u/48669085?v=4" width="100px;" alt=""/>
+          <br /><sub><b>earthkingman</b></sub>
+        </a>
+        <br />
+        <sub><b>Backend</b></sub>
+       </td>
+      <td align="center">
+        <a href="https://github.com/nyeoni">
+          <img src="https://avatars.githubusercontent.com/u/51353146?s=400&u=85ebd0837780667df7646367cebd51008a5683ac&v=4" width="100px;" alt=""/>
+          <br /><sub><b>nyeoni</b></br></sub>
+        </a>
+        <sub><b>Frontend</b></sub>
+       </td>
+             <td align="center">
+        <a href="https://github.com/Yenowme">
+          <img src="https://avatars.githubusercontent.com/u/76904042?v=4" width="100px;" alt=""/>
+          <br /><sub><b>Yenowme</b></br></sub>
+        </a>
+        <sub><b>Frontend</b></sub>
+       </td>
+     </tr>
+  </tbody>
+</table>

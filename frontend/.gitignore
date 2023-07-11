@@ -3,5 +3,10 @@ node_modules
 dist-ssr
 *.local
 *.lock
+.env
+.env*
 .env.development
 .env.production
+!.env.sample
+nohup.out
+dist/
