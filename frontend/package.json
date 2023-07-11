@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build --mode production",
+    "build:dev": "vite build --mode development",
     "typecheck": "tsc && vite build",
     "serve": "vite preview --port 3000",
     "eslint": "eslint --fix",
