@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-export = {
+export default {
 	type: "mysql",
 	host: process.env.MYSQL_HOST,
 	port: process.env.MYSQL_PORT,
@@ -18,4 +18,11 @@ export = {
 		migrationsDir: "src/migration",
 		subscribersDir: "src/subscriber",
 	},
+  cache: {
+    type: "redis",
+    options: {
+      host: process.env.REDIS_HOST,
+      port: process.env.REDIS_PORT,
+    }
+  }
 };
